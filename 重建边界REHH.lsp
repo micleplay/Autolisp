@@ -1,0 +1,11 @@
+(defun c:rehh (/ ss)
+  (setq ss (ssget))
+  (if (not (null ss))
+      (progn
+        (meow::ss:for rehh ss)
+      )
+  )
+)
+(defun rehh (ename)
+  (command "_.hatchedit" ename "b" "p" "n")
+)
